@@ -1,0 +1,17 @@
+{
+    "name": "telegram-bot/earning-bot",
+    "description": "PHP Telegram Earning Bot",
+    "type": "project",
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "files": ["index.php"]
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "chmod 664 users.json error.log || true",
+            "chown www-data:www-data users.json error.log || true"
+        ]
+    }
+}
